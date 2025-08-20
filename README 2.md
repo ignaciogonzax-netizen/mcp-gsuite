@@ -1,6 +1,6 @@
 # mcp-gsuite MCP server
-
 [![Trust Score](https://archestra.ai/mcp-catalog/api/badge/quality/MarkusPfundstein/mcp-gsuite)](https://archestra.ai/mcp-catalog/markuspfundstein__mcp-gsuite)
+
 [![smithery badge](https://smithery.ai/badge/mcp-gsuite)](https://smithery.ai/server/mcp-gsuite)
 MCP server to interact with Google products.
 
