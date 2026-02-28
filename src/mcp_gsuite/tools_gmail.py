@@ -41,8 +41,7 @@ class QueryEmailsToolHandler(toolhandler.ToolHandler):
                             - 'from:example@gmail.com' for emails from a specific sender
                             - 'newer_than:2d' for emails from last 2 days
                             - 'has:attachment' for emails with attachments
-                            If not provided, returns recent emails without filtering.""",
-                        "required": False
+                            If not provided, returns recent emails without filtering."""
                     },
                     "max_results": {
                         "type": "integer",
