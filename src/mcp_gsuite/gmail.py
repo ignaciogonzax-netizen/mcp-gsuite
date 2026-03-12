@@ -109,8 +109,15 @@ class GmailService():
                         data = part.get('body', {}).get('data')
                         if data:
                             return base64.urlsafe_b64decode(data).decode('utf-8')
-                
-                # If no direct text/plain, recursively check nested multipart structures
+
+                # Fallback to text/html if no text/plain with content
+                for part in parts:
+                    if part.get('mimeType') == 'text/html':
+                        data = part.get('body', {}).get('data')
+                        if data:
+                            return base64.urlsafe_b64decode(data).decode('utf-8')
+
+                # If no direct text part, recursively check nested multipart structures
                 for part in parts:
                     if part.get('mimeType', '').startswith('multipart/'):
                         nested_body = self._extract_body(part)
