@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install uv && uv pip install --system -e .
+RUN pip install -e .
 
 EXPOSE 8000
 
