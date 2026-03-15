@@ -8,4 +8,4 @@ RUN pip install -e .
 
 EXPOSE 8000
 
-CMD ["python", "-m", "mcp_gsuite"]
+CMD ["python", "-m", "mcp_gsuite.server"]
