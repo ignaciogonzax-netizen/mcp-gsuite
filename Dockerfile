@@ -4,8 +4,8 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install -e .
+RUN pip install -e . && pip install mcp-proxy
 
 EXPOSE 8000
 
-CMD ["python", "-m", "mcp_gsuite.server"]
+CMD ["mcp-proxy", "--port", "8000", "--", "python", "-m", "mcp_gsuite.server"]
